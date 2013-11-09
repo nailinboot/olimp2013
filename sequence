@@ -1,0 +1,46 @@
+#include <iostream>
+#include <stdio.h>
+
+using namespace std;
+
+int main()
+{
+	freopen("SEQUENCE.IN","r",stdin);
+
+	int s,t,a,n;
+	int m[8] = {4,16,37,58,89,145,42,20};
+	bool f;
+	cin >> t;
+	for (int i=1; i<=t; i++)
+	{
+		f = false;
+		cin >> a >> n;
+
+			for (int j=1; j<=n; j++)
+			{
+					if (f) break;
+					s = 0;
+					while (a)
+					{
+						int x = a%10;
+						s += x*x;
+						a /= 10;
+					}
+					a = s;
+					if (a==1)
+					{
+						cout << 1 << endl;
+						f = true;
+					}
+					if (a==4)
+					{
+						cout << m[(n-j+1)%8] << endl;
+						f = true;
+					}
+			}
+
+		if (!f) cout << a << endl;
+	}
+
+	return 0;
+}
