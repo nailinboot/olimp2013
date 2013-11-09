@@ -5,7 +5,7 @@ using namespace std;
 
 int main()
 {
-	freopen("input.txt","r",stdin);
+	freopen("BIT.IN","r",stdin);
 	int t,n,k=0;
 	bool f;
 	cin >> t;
