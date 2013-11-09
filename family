@@ -1,0 +1,20 @@
+#include <iostream>
+#include <stdio.h>
+
+using namespace std;
+
+int main()
+{
+	freopen("input.txt","r", stdin);
+
+	int t,n,m;
+	cin >> t;
+	for (int i=1; i<=t; i++)
+	{
+		cin >> n >> m;
+		int x = n/(m-1);
+		int y = x + n;
+		cout << y << " " << x << endl;
+	}
+	return 0;
+}
