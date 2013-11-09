@@ -1,0 +1,31 @@
+#include <iostream>
+#include <stdio.h>
+
+using namespace std;
+
+int main()
+{
+	freopen("input.txt","r",stdin);
+	int t,n,k=0;
+	bool f;
+	cin >> t;
+	for (int i=1; i<=t; i++)
+	{
+		k = 0;
+		f = true;
+		cin >> n;
+		while (n)
+		{
+			if ((n%2) && (f))
+			{
+				cout << (1 << k) << " ";	
+				f = false;
+			}
+			k++;
+			n /= 2;
+		}
+		cout << (1 << (k-1)) << endl;
+	}
+
+	return 0;
+}
